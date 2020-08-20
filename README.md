@@ -1,0 +1,2 @@
+# notes
+Obsidian notes vault
