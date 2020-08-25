@@ -1,6 +1,6 @@
 # Status Conditions
 
-Kubernetes Status Conditions are a mess. The idea is sound (you should be able to generically determine when a resouce is OK or not), but the semantics of a Condition are impossible to determine programmatically.
+Kubernetes Status Conditions are a mess. The idea is sound (you should be able to generically determine when a resource is OK or not), but the semantics of a Condition are impossible to determine programmatically.
 
 There is a notion that "conditions are for humans", but that doesn't really make sense. A Kubernetes resource is (by definition) an API, so every field within it is part of that API. It makes no sense to say that only a human can interpret the output of an API. Clearly the status of a resource is of interest to programmatic consumers.
 
@@ -27,7 +27,7 @@ The generic kstatus condition support works on a negative polarity basis (Condit
 
 [kubernetes-sigs/service-apis#86](https://github.com/kubernetes-sigs/service-apis/pull/86) adds a HTTPRoute Condition that links back to the selecting Gateway. The Type is `Admitted`, which is positive polarity. Arguably `Ready` doesn't make sense on routes, because the Gateway is the resource that actually has effects and can be ready (i.e. readiness is a transitive property of all the selected routes.)
 
-The positive polarity `Admitted` makes a lot of sense, but do we really want to mix polarities like this? Does this argue for standardizing on positive polarify everywhere?
+The positive polarity `Admitted` makes a lot of sense, but do we really want to mix polarities like this? Does this argue for standardizing on positive polarity everywhere?
 
 ## Current Conditions
 ### Gateway
@@ -115,7 +115,7 @@ ConditionPortConflict ListenerConditionType = "PortConflict"
 ```
 - Conflicts happen on ports, so maybe this is really a port condition.
 - When there is a port conflict, however, the obvious thing you want to know is which Listeners caused it, but since Listeners are anonymous, we can't link them directly.
-- Not clear what the positive polaroty of this is, maybe that indicates that it is a `Reason` not a `Type`.
+- Not clear what the positive polarity of this is, maybe that indicates that it is a `Reason` not a `Type`.
 
 ```Go
 // ConditionInvalidCertificateRef indicates the certificate reference of the
