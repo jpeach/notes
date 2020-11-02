@@ -11,3 +11,6 @@ Obsidian notes vault.
 ## Service APIs
 * [Service APIs](https://github.com/kubernetes-sigs/service-apis)
 * [[Status Conditions]]
+
+## Deployment Topics
+* [[Google TPM Attestation]]
