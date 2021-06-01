@@ -14,3 +14,7 @@ Obsidian notes vault.
 
 ## Deployment Topics
 * [[Google TPM Attestation]]
+
+## WASM
+* [[Specifications]]
+* [[Envoy WASM Examples]]
