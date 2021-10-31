@@ -1,5 +1,13 @@
 TLS [overview](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/security/ssl#tls) from Envoy docs. Mozilla [recommendations](https://github.com/mozilla/server-side-tls/blob/gh-pages/Server_Side_TLS.mediawiki).
 
+## Certificates
+
+Certifcates are delivered over SDS. The certificate is in PEM format and serialized in the [TlsCertificate](https://www.envoyproxy.io/docs/envoy/latest/api-v3/extensions/transport_sockets/tls/v3/common.proto#extensions-transport-sockets-tls-v3-tlscertificate) protobuf. The actual field is called `certificate_chain`. Envoy processes this as a stream of X509 certificates in PEM format. The first certificate is the server certificate; the remaining certificates are the CA chain.
+
+To actually configure ECC and RSA certificate support in Envoy, you need to somehow feed Envoy two `TlsCertificate` objects. They would each contain a certificate for the same name, but with different keys. The Envoy code to do this iterates TLS certificate configurations (roughly `TlsCertificate` objects) and has some checks to ensure global key type uniqueness.
+
+This is not supported with SDS, [#13226](https://github.com/envoyproxy/envoy/issues/13226). Taking a quick look at the current SDS code, I don't see an obvious restriction. Looks like this was fixed in [#16606](https://github.com/envoyproxy/envoy/pull/16605).
+
 ## Session Tickets
 
 Why Mozilla recommends against TLS session tickets [mozilla/server-side-tls#135](https://github.com/mozilla/server-side-tls/issues/135)).
