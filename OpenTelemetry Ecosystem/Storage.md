@@ -4,5 +4,7 @@ No clear consensus on how to store large quantities of OpenTelemetry signals. Pr
 Comparison of Clickhouse, Druid and Pinot:
 https://leventov.medium.com/comparison-of-the-open-source-olap-systems-for-big-data-clickhouse-druid-and-pinot-8e042a5ed1c7
 
-Netflix realtime data infrrastructure:
+Netflix realtime data infrastructure:
 https://zhenzhongxu.com/the-four-innovation-phases-of-netflixs-trillions-scale-real-time-data-infrastructure-2370938d7f01
+
+Slack KalDB: https://github.com/slackhq/kaldb

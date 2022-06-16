@@ -2,7 +2,6 @@
 
 Grafana is the most common graphing tool, usually showing time series data from Prometheus. In an OpenTelemetry world, we want to be able to combine metrics, logs, profiles, events, and whatever other telemetry signal are available. We want to be able to slice and dice quickly and across arbitrary columns.
 
-
 ## SigNoz
 https://signoz.io/
 
@@ -12,6 +11,11 @@ https://superset.apache.org/
 Supports Clickhouse. Intended for exploratory visualizations.
 
 Making releases. Community seems fairly active.
+
+## Snorkel
+https://snorkel.logv.org/
+
+Based on Scuba experiences.
 
 ## Existing Systems Reports
 ### LinkedIn ThirdEye

@@ -10,6 +10,10 @@ ClickHouse supports Trace Context, see [here](https://clickhouse.com/docs/en/ope
 
 Envoy does not currently support OpenTelemetry Trace Context, but there is an implementation in [#20281](https://github.com/envoyproxy/envoy/pull/20281) that will probably land for 1.24. Contour support is tracked in [#399](https://github.com/projectcontour/contour/issues/399).
 
+## Collector
+
+https://opentelemetry.uptrace.dev/guide/collector.html#what-is-opentelemetry-collector
+
 ## Agent management
 [OpAmp](https://github.com/open-telemetry/opamp-spec) is a protocol for collector agents to connect to a policy server to receive configuration.
 
