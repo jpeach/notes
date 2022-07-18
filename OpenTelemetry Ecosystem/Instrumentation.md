@@ -13,6 +13,7 @@ Envoy does not currently support OpenTelemetry Trace Context, but there is an im
 ## Collector
 
 https://opentelemetry.uptrace.dev/guide/collector.html#what-is-opentelemetry-collector
+https://www.cockroachlabs.com/blog/opentelemetry-collector-cockroachdb-datadog/
 
 ## Agent management
 [OpAmp](https://github.com/open-telemetry/opamp-spec) is a protocol for collector agents to connect to a policy server to receive configuration.

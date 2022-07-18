@@ -8,3 +8,10 @@ Netflix realtime data infrastructure:
 https://zhenzhongxu.com/the-four-innovation-phases-of-netflixs-trillions-scale-real-time-data-infrastructure-2370938d7f01
 
 Slack KalDB: https://github.com/slackhq/kaldb
+
+Grafana Tempo: https://github.com/grafana/tempo
+
+FrostDB (formerly ArcticDB): https://www.polarsignals.com/blog/posts/2022/05/04/introducing-arcticdb/
+
+## Related readings
+* [Why Observability Requires a Distributed Column Store](https://www.honeycomb.io/blog/why-observability-requires-distributed-column-store/)

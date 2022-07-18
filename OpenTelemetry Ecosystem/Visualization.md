@@ -17,6 +17,16 @@ https://snorkel.logv.org/
 
 Based on Scuba experiences.
 
+## Kibana
+https://www.elastic.co/kibana/
+
+Obviously.
+
+## Loki
+https://grafana.com/oss/loki/
+
+Log visualizer from Grafana. Indexes tags/metadata not full text, so I suppose benefits more from structured logging. Some OpenTelemetry support coming in [#5363](https://github.com/grafana/loki/pull/5363).
+
 ## Existing Systems Reports
 ### LinkedIn ThirdEye
 https://engineering.linkedin.com/blog/2019/01/introducing-thirdeye--linkedins-business-wide-monitoring-platfor

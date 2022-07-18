@@ -1,0 +1,63 @@
+// See https://onlinewardleymaps.com/#V0AkvK0c7PImLrwlzJ
+// Map where Otel sits in the Observability ecosystem.
+
+title Observability
+
+anchor exploration+understanding [0.99, 0.29] label [0.99, 0.29]
+
+note (Research -> Vendor -> Open Source) [0.87, 0.46]
+note (Vendor -> Open Source) [0.53, 0.54]
+note (Bespoke -> Vendor -> Open Source) [0.14, 0.42]
+
+note +Evolving commodity and standards [0.72, 0.68]
+
+note +metrics [0.47, 0.51]
+note +logs [0.40, 0.61]
+note +profiles [0.61, 0.32]
+note +traces [0.55, 0.42]
+
+component metrics [0.04, 0.88] label [-16, 23]
+component logs [0.03, 0.81] label [8, 16]
+component traces [0.03, 0.52] label [-11, 17]
+component profiles [0.04, 0.43] label [-5, 15]
+
+component data silos [0.20, 0.20] label [-3, -15]
+pipeline data silos [0.1, 0.8]
+
+component telemetry pipeline [0.10, 0.40] label [-84, 5]
+profiles -> telemetry pipeline
+traces -> telemetry pipeline
+logs -> telemetry pipeline
+metrics -> telemetry pipeline
+telemetry pipeline -> data silos
+
+ecosystem Applications [0.84, 0.08] label [-32, -53]
+component visualization+analytics [0.92, 0.43] label [41, -25]
+pipeline visualization+analytics [0.32, 0.83]
+
+exploration+understanding -> visualization+analytics
+
+component opentelementry SDK [0.30, 0.75] label [26, -26]
+component opentelemetry protocol [0.40, 0.75] label [15, -23]
+component unified storage [0.70, 0.40] label [-65, -2]
+
+component analytics+insight [0.81, 0.32] label [-94, 6]
+unified storage -> analytics+insight
+Applications -> opentelementry SDK
+opentelementry SDK -> opentelemetry protocol
+
+pipeline commodity telemetry [0.5, 0.8]
+component commodity telemetry [0.58, 0.61] label [11, -34]
+
+opentelemetry protocol -> commodity telemetry
+commodity telemetry -> unified storage
+analytics+insight -> visualization+analytics
+unified storage -> visualization+analytics
+analytics+insight -> exploration+understanding
+
+annotation 1  [0.12, 0.10] Traditional monitoring; bespoke signals isolated in data silos
+annotation 2  [0.97, 0.76] OpenTelemetry; commodity data supporting an insight ecosystem 
+annotations [0.46, 0.02]
+
+townplanners [0.75, 0.30, 0.25, 0.90]
+
