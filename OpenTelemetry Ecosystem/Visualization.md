@@ -27,6 +27,9 @@ https://grafana.com/oss/loki/
 
 Log visualizer from Grafana. Indexes tags/metadata not full text, so I suppose benefits more from structured logging. Some OpenTelemetry support coming in [#5363](https://github.com/grafana/loki/pull/5363).
 
+## Timescale SQL
+Analyzing and Visualizing OpenTelemetry Traces with SQL - John Pruitt, Timescale, https://youtu.be/rjJgZ_MNmPQ
+
 ## Existing Systems Reports
 ### LinkedIn ThirdEye
 https://engineering.linkedin.com/blog/2019/01/introducing-thirdeye--linkedins-business-wide-monitoring-platfor
